@@ -8,6 +8,14 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'customerdashboard',
+    loadChildren: './customer-dashboard/customer-dashboard.module#CustomerDashboardModule'
+  },
+  {
+    path: 'customerassets',
+    loadChildren: './customer-assets/customer-assets.module#CustomerAssetsModule'
+  },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
